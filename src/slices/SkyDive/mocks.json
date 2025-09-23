@@ -10,7 +10,7 @@
 			},
 			"flavor": {
 				"__TYPE__": "FieldContent",
-				"value": "lane",
+				"value": "ognjen",
 				"type": "Select"
 			}
 		},
