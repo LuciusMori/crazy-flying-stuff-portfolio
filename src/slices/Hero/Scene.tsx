@@ -87,23 +87,23 @@ export default function Scene({}: Props) {
       // Rotate can group
       .to(groupRef.current.rotation, { y: Math.PI * 2 })
 
-      // Can 1 - black cherry
+      // Can 1 - ognjen
       .to(can1Ref.current.position, { x: -0.2, y: -0.7, z: -2 }, 0)
       .to(can1Ref.current.rotation, { z: 0.3 }, 0)
 
-      // Can 2 - Lemon Lime
+      // Can 2 - naima
       .to(can2Ref.current.position, { x: 1, y: -0.2, z: -1 }, 0)
       .to(can2Ref.current.rotation, { z: 0 }, 0)
 
-      // Can 3 - Grape
+      // Can 3 - nadine
       .to(can3Ref.current.position, { x: -0.3, y: 0.5, z: -1 }, 0)
       .to(can3Ref.current.rotation, { z: -0.1 }, 0)
 
-      // Can 4 - Strawberry Lemonade
+      // Can 4 - brutus
       .to(can4Ref.current.position, { x: 0, y: -0.3, z: 0.5 }, 0)
       .to(can4Ref.current.rotation, { z: 0.3 }, 0)
 
-      // Can 5 -Watermelon
+      // Can 5 - lane
       .to(can5Ref.current.position, { x: 0.3, y: 0.5, z: -0.5 }, 0)
       .to(can5Ref.current.rotation, { z: -0.25 }, 0)
       .to(
@@ -118,27 +118,27 @@ export default function Scene({}: Props) {
       <group ref={can1GroupRef}>
         <FloatingCan
           ref={can1Ref}
-          flavor="blackCherry"
+          flavor="ognjen"
           floatSpeed={FLOAT_SPEED}
         />
       </group>
       <group ref={can2GroupRef}>
         <FloatingCan
           ref={can2Ref}
-          flavor="lemonLime"
+          flavor="naima"
           floatSpeed={FLOAT_SPEED}
         />
       </group>
 
-      <FloatingCan ref={can3Ref} flavor="grape" floatSpeed={FLOAT_SPEED} />
+      <FloatingCan ref={can3Ref} flavor="nadine" floatSpeed={FLOAT_SPEED} />
 
       <FloatingCan
         ref={can4Ref}
-        flavor="strawberryLemonade"
+        flavor="brutus"
         floatSpeed={FLOAT_SPEED}
       />
 
-      <FloatingCan ref={can5Ref} flavor="watermelon" floatSpeed={FLOAT_SPEED} />
+      <FloatingCan ref={can5Ref} flavor="lane" floatSpeed={FLOAT_SPEED} />
 
       {/* <OrbitControls /> */}
       <Environment files="/hdr/lobby.hdr" environmentIntensity={1.5} />

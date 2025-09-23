@@ -25,13 +25,13 @@
             "label": "Flavor",
             "placeholder": "",
             "options": [
-              "lemonLime",
-              "grape",
-              "blackCherry",
-              "strawberryLemonade",
-              "watermelon"
+              "ognjen",
+              "naima",
+              "nadine",
+              "brutus",
+              "lane"
             ],
-            "default_value": "lemonLime"
+            "default_value": "ognjen"
           }
         }
       },

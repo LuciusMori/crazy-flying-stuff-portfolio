@@ -2,7 +2,6 @@
 
 import { useGLTF, useTexture } from "@react-three/drei";
 import * as THREE from "three";
-import { useEffect } from "react";
 
 useGLTF.preload("/Soda-can.gltf");
 
@@ -33,18 +32,13 @@ export function SodaCan({
   const { nodes } = useGLTF("/Soda-can.gltf");
 
   const labels = useTexture(flavorTextures);
-
-  useEffect(() => {
-    // Check if textures are loaded before accessing them
-    if (labels.ognjen && labels.naima && labels.nadine && labels.brutus && labels.lane) {
-      // Fixes upside down labels
-      labels.ognjen.flipY = false;
-      labels.naima.flipY = false;
-      labels.nadine.flipY = false;
-      labels.brutus.flipY = false;
-      labels.lane.flipY = false;
-    }
-  }, [labels]);
+  
+  // Fixes upside down labels
+  if (labels.ognjen) labels.ognjen.flipY = false;
+  if (labels.naima) labels.naima.flipY = false;
+  if (labels.nadine) labels.nadine.flipY = false;
+  if (labels.brutus) labels.brutus.flipY = false;
+  if (labels.lane) labels.lane.flipY = false;
 
   const label = labels[flavor];
 
@@ -61,7 +55,11 @@ export function SodaCan({
         receiveShadow
         geometry={(nodes.cylinder_1 as THREE.Mesh).geometry}
       >
-        <meshStandardMaterial roughness={0.15} metalness={0.7} map={label} />
+        <meshStandardMaterial 
+          roughness={0.15} 
+          metalness={0.7} 
+          map={label} 
+        />
       </mesh>
       <mesh
         castShadow

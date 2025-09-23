@@ -18,20 +18,16 @@ import { ArrowIcon } from "./ArrowIcon";
 import { WavyCircles } from "./WavyCircles";
 
 const SPINS_ON_CHANGE = 8;
-const FLAVORS: {
+const sodaFlavors: {
   flavor: SodaCanProps["flavor"];
   color: string;
   name: string;
 }[] = [
-  { flavor: "blackCherry", color: "#710523", name: "Black Cherry" },
-  { flavor: "grape", color: "#572981", name: "Grape Goodness" },
-  { flavor: "lemonLime", color: "#164405", name: "Lemon Lime" },
-  {
-    flavor: "strawberryLemonade",
-    color: "#690B3D",
-    name: "Strawberry Lemonade",
-  },
-  { flavor: "watermelon", color: "#4B7002", name: "Watermelon Crush" },
+  { flavor: "ognjen", color: "#710523", name: "Ognjen" },
+  { flavor: "naima", color: "#572981", name: "Naima" },
+  { flavor: "nadine", color: "#164405", name: "Nadine" },
+  { flavor: "brutus", color: "#690B3D", name: "Brutus" },
+  { flavor: "lane", color: "#4B7002", name: "Lane" },
 ];
 
 /**
@@ -49,7 +45,7 @@ const Carousel = ({ slice }: CarouselProps): JSX.Element => {
   function changeFlavor(index: number) {
     if (!sodaCanRef.current) return;
 
-    const nextIndex = (index + FLAVORS.length) % FLAVORS.length;
+    const nextIndex = (index + sodaFlavors.length) % sodaFlavors.length;
 
     const tl = gsap.timeline();
 
@@ -68,8 +64,8 @@ const Carousel = ({ slice }: CarouselProps): JSX.Element => {
       .to(
         ".background, .wavy-circles-outer, .wavy-circles-inner",
         {
-          backgroundColor: FLAVORS[nextIndex].color,
-          fill: FLAVORS[nextIndex].color,
+          backgroundColor: sodaFlavors[nextIndex].color,
+          fill: sodaFlavors[nextIndex].color,
           ease: "power2.inOut",
           duration: 1,
         },
@@ -108,7 +104,7 @@ const Carousel = ({ slice }: CarouselProps): JSX.Element => {
               ref={sodaCanRef}
               floatIntensity={0.3}
               rotationIntensity={1}
-              flavor={FLAVORS[currentFlavorIndex].flavor}
+              flavor={sodaFlavors[currentFlavorIndex].flavor}
             />
           </Center>
 
@@ -129,7 +125,7 @@ const Carousel = ({ slice }: CarouselProps): JSX.Element => {
 
       <div className="text-area relative mx-auto text-center">
         <div className="text-wrapper text-4xl font-medium">
-          <p>{FLAVORS[currentFlavorIndex].name}</p>
+          <p>{sodaFlavors[currentFlavorIndex].name}</p>
         </div>
         <div className="mt-2 text-2xl font-normal opacity-90">
           <PrismicRichText field={slice.primary.price_copy} />
