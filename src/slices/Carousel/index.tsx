@@ -22,12 +22,38 @@ const sodaFlavors: {
   flavor: SodaCanProps["flavor"];
   color: string;
   name: string;
+  description: string;
 }[] = [
-  { flavor: "ognjen", color: "#710523", name: "Ognjen" },
-  { flavor: "naima", color: "#572981", name: "Naima" },
-  { flavor: "nadine", color: "#164405", name: "Nadine" },
-  { flavor: "brutus", color: "#690B3D", name: "Brutus" },
-  { flavor: "lane", color: "#4B7002", name: "Lane" },
+  { 
+    flavor: "ognjen", 
+    color: "#710523", 
+    name: "Ognjen",
+    description: "Ich bin hier der Web- und Softwareentwickler. Ihr braucht etwas Außergewöhnliches? Dann bin ich euer Mann."
+  },
+  { 
+    flavor: "naima", 
+    color: "#572981", 
+    name: "Naima",
+    description: "Ich bin die Social-Media-Versessene. Die Ausbildung zur SM-Managerin habe ich erst kürzlich absolviert und möchte gerne von euch lernen."
+  },
+  { 
+    flavor: "nadine", 
+    color: "#164405", 
+    name: "Nadine",
+    description: "Mich gibt es gratis dazu!"
+  },
+  { 
+    flavor: "brutus", 
+    color: "#690B3D", 
+    name: "Brutus",
+    description: "Mich gibt es gratis dazu!"
+  },
+  { 
+    flavor: "lane", 
+    color: "#4B7002", 
+    name: "Lane",
+    description: "Ich bin nur noch eine Erinnerung. Aber eine Unvergessliche!"
+  },
 ];
 
 /**
@@ -87,7 +113,7 @@ const Carousel = ({ slice }: CarouselProps): JSX.Element => {
       <WavyCircles className="absolute left-1/2 top-1/2 h-[120vmin] -translate-x-1/2 -translate-y-1/2 text-[#710523]" />
 
       <h2 className="relative text-center text-5xl font-bold">
-        <PrismicText field={slice.primary.heading} />
+        Uns gib's in unterschiedlichen Geschmacksrichtungen:
       </h2>
 
       <div className="grid grid-cols-[auto,auto,auto] items-center">
@@ -127,8 +153,8 @@ const Carousel = ({ slice }: CarouselProps): JSX.Element => {
         <div className="text-wrapper text-4xl font-medium">
           <p>{sodaFlavors[currentFlavorIndex].name}</p>
         </div>
-        <div className="mt-2 text-2xl font-normal opacity-90">
-          <PrismicRichText field={slice.primary.price_copy} />
+        <div className="mt-2 text-xl font-normal opacity-90 max-w-md mx-auto">
+          {sodaFlavors[currentFlavorIndex].description}
         </div>
       </div>
     </section>
