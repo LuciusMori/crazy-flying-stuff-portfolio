@@ -30,6 +30,15 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
   const ready = useStore((state) => state.ready);
   const isDesktop = useMediaQuery("(min-width: 768px)", true);
 
+  // Override texts with custom content
+  const customTexts = {
+    heading: "Naima & Ognjen",
+    subheading: "Social Media & Webentwicklung", 
+    body: "Wir sind kreativ und arbeiten Hand in Hand",
+    buttonText: "Start the magic",
+    secondHeading: "Naima & Ognjen"
+  };
+
   useGSAP(
     () => {
       if (!ready && isDesktop) return;
@@ -119,22 +128,25 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
           <div className="grid auto-rows-min place-items-center text-center">
             <h1 className="hero-header text-7xl font-black uppercase leading-[.8] text-orange-500 md:text-[9rem] lg:text-[13rem]">
               <TextSplitter
-                text={asText(slice.primary.heading)}
+                text={customTexts.heading}
                 wordDisplayStyle="block"
                 className="hero-header-word"
               />
             </h1>
             <div className="hero-subheading mt-12 text-5xl font-semibold text-sky-950 lg:text-6xl">
-              <PrismicRichText field={slice.primary.subheading} />
+              {customTexts.subheading}
             </div>
             <div className="hero-body text-2xl font-normal text-sky-950">
-              <PrismicRichText field={slice.primary.body} />
+              {customTexts.body}
             </div>
-            <Button
-              buttonLink={slice.primary.button_link}
-              buttonText={slice.primary.button_text}
-              className="hero-button mt-12"
-            />
+            <button
+              className="hero-button mt-12 rounded-xl bg-orange-600 px-5 py-4 text-center text-xl font-bold uppercase tracking-wide text-white transition-colors duration-150 hover:bg-orange-700 md:text-2xl"
+              onClick={() => {
+                document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+            >
+              {customTexts.buttonText}
+            </button>
           </div>
         </div>
 
@@ -145,10 +157,10 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
           />
           <div>
             <h2 className="text-side-heading text-balance text-6xl font-black uppercase text-sky-950 lg:text-8xl">
-              <TextSplitter text={asText(slice.primary.second_heading)} />
+              <TextSplitter text={customTexts.secondHeading} />
             </h2>
             <div className="text-side-body mt-4 max-w-xl text-balance text-xl font-normal text-sky-950">
-              <PrismicRichText field={slice.primary.second_body} />
+              {customTexts.body}
             </div>
           </div>
         </div>

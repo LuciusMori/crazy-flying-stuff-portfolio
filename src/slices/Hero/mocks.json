@@ -9,7 +9,7 @@
 					{
 						"type": "heading1",
 						"content": {
-							"text": "Enough"
+							"text": "Naima & Ognjen"
 						}
 					}
 				]
@@ -20,7 +20,7 @@
 					{
 						"type": "paragraph",
 						"content": {
-							"text": "Ipsum aliqua laboris dolore incididunt cupidatat voluptate qui sit excepteur voluptate. Proident tempor irure et esse aliquip velit cillum velit amet exercitation."
+							"text": "Social Media & Webentwicklung"
 						}
 					}
 				]
@@ -31,14 +31,14 @@
 					{
 						"type": "paragraph",
 						"content": {
-							"text": "Veniam sint commodo ad deserunt qui anim nostrud reprehenderit Lorem incididunt sint. Proident nostrud ex voluptate dolor incididunt proident sint aute occaecat cupidatat in. Enim tempor et est nostrud nostrud duis Lorem officia."
+							"text": "Wir sind kreativ und arbeiten Hand in Hand"
 						}
 					}
 				]
 			},
 			"button_text": {
 				"__TYPE__": "FieldContent",
-				"value": "jack",
+				"value": "Start the magic",
 				"type": "Text"
 			},
 			"button_link": {
