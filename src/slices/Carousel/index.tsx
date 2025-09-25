@@ -40,7 +40,7 @@ const sodaFlavors: {
     flavor: "nadine", 
     color: "#164405", 
     name: "Nadine",
-    description: "Mich gibt es gratis dazu!"
+    description: "Ich bin auch recht günstig zu haben! Nicht falsch verstehen, ja!?"
   },
   { 
     flavor: "brutus", 
