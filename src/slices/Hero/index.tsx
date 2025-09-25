@@ -34,9 +34,10 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
   const customTexts = {
     heading: "Naima & Ognjen",
     subheading: "Social Media & Webentwicklung", 
-    body: "Wir sind kreativ und arbeiten Hand in Hand",
-    buttonText: "Start the magic",
-    secondHeading: "Naima & Ognjen"
+    body: "... gehen Hand in Hand",
+    buttonText: "Stoßt mit uns an!",
+    secondHeading: "Lernt unsere kleine Gemeinschaft kennen",
+    secondBody: "Naima (Ognjens bessere Hälfte), Ognjen (Naimas, an guten Tagen, bessere Hälfte), Nadine (Naimas Schwester), Brutus (Nadines treuer Begleiter) und - ehemals - Lane (Naimas und Ognjens Sweety). War das zu kompliziert? Dann scrollt weiter."
   };
 
   useGSAP(
@@ -160,7 +161,7 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
               <TextSplitter text={customTexts.secondHeading} />
             </h2>
             <div className="text-side-body mt-4 max-w-xl text-balance text-xl font-normal text-sky-950">
-              {customTexts.body}
+              {customTexts.secondBody}
             </div>
           </div>
         </div>

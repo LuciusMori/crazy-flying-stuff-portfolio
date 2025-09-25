@@ -16,15 +16,17 @@ const BigText = ({ slice }: BigTextProps): JSX.Element => {
       data-slice-variation={slice.variation}
       className="min-h-screen w-screen overflow-hidden bg-[#FE6334] text-[#FEE832]"
     >
-      <h2 className="grid w-full gap-[3vw] py-10 text-center font-black uppercase leading-[.7]">
-        <div className="text-[34vw]">WE'RE</div>
-        <div className="grid gap-[3vw] text-[34vw] md:flex md:text-[11vw]">
-          <span className="inline-block">how </span>
-          <span className="inline-block max-md:text-[27vw]">'bout' </span>
-          <span className="inline-block max-md:text-[40vw]">you? </span>
-        </div>
-        <div className="text-[32vw]">DIFFERENT!</div>
-      </h2>
+      <div className="flex items-center justify-center min-h-screen px-4">
+        <h2 className="grid w-full max-w-6xl gap-[2vw] text-center font-black leading-[.8]">
+          <div className="text-[20vw] md:text-[12vw] lg:text-[10vw]">WE'RE</div>
+          <div className="grid gap-[1vw] text-[14vw] md:flex md:text-[8vw] lg:text-[6vw] md:justify-center text-green-700">
+            <span className="inline-block">how </span>
+            <span className="inline-block">'bout </span>
+            <span className="inline-block">you? </span>
+          </div>
+          <div className="text-[18vw] md:text-[11vw] lg:text-[9vw]">DIFFERENT!</div>
+        </h2>
+      </div>
     </section>
   );
 };
