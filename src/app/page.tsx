@@ -17,10 +17,10 @@ export async function generateMetadata(): Promise<Metadata> {
   const home = await client.getByUID("page", "home");
 
   return {
-    title: prismic.asText(home.data.title),
-    description: home.data.meta_description,
+    title: "OGIma - Naima & Ognjen",
+    description: "Social Media & Webentwicklung - Wir gehen Hand in Hand",
     openGraph: {
-      title: home.data.meta_title ?? undefined,
+      title: "OGIma - Naima & Ognjen",
       images: [{ url: home.data.meta_image.url ?? "" }],
     },
   };
