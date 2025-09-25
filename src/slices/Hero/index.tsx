@@ -37,7 +37,19 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
     body: "... gehen Hand in Hand",
     buttonText: "Stoßt mit uns an!",
     secondHeading: "Lernt unsere kleine Gemeinschaft kennen",
-    secondBody: "Naima (Ognjens bessere Hälfte), Ognjen (Naimas, an guten Tagen, bessere Hälfte), Nadine (Naimas Schwester), Brutus (Nadines treuer Begleiter) und - ehemals - Lane (Naimas und Ognjens Sweety). War das zu kompliziert? Dann scrollt weiter."
+    secondBody: (
+      <>
+        Wir wohnen in einer malerischen Waldsiedlung in Stromberg Schindeldorf.
+        <br /><br />
+        WIR sind:
+        <br />
+        <br />
+        Naima (Ognjens bessere Hälfte), Ognjen (Naimas, an guten Tagen, bessere Hälfte), Nadine (Naimas Schwester), Brutus (Nadines treuer Begleiter) und - ehemals - Lane (Naimas und Ognjens Sweety). War das zu kompliziert? Dann scrollt weiter... 
+        <br />
+        <br />
+        und stoßt mit uns an!
+      </>
+    )
   };
 
   useGSAP(
