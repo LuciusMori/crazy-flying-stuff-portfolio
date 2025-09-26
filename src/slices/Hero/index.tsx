@@ -35,7 +35,6 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
     heading: "Naima & Ognjen",
     subheading: "Social Media & Webentwicklung", 
     body: "... gehen Hand in Hand",
-    buttonText: "Stoßt mit uns an!",
     secondHeading: "Lernt unsere kleine Gemeinschaft kennen",
     secondBody: (
       <>
@@ -79,11 +78,6 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
           opacity: 0,
           y: 10,
         })
-        .from(".hero-button", {
-          opacity: 0,
-          y: 10,
-          duration: 0.6,
-        });
 
       const scrollTl = gsap.timeline({
         scrollTrigger: {
@@ -152,14 +146,6 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
             <div className="hero-body text-2xl font-normal text-sky-950">
               {customTexts.body}
             </div>
-            <button
-              className="hero-button mt-12 rounded-xl bg-orange-600 px-5 py-4 text-center text-xl font-bold uppercase tracking-wide text-white transition-colors duration-150 hover:bg-orange-700 md:text-2xl"
-              onClick={() => {
-                document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
-              }}
-            >
-              {customTexts.buttonText}
-            </button>
           </div>
         </div>
 
