@@ -21,6 +21,22 @@ export type AlternatingTextProps =
  * Component for "AlternatingText" Slices.
  */
 const AlternatingText = ({ slice }: AlternatingTextProps): JSX.Element => {
+  // Override with custom content
+  const customTextGroup = [
+    {
+      heading: "Wau! Wuff!",
+      body: "Immer dieser Hund! Ständig ergreift er das Wort! Der Ognjen hier: Wir, Naima & ich, bewerben uns bei euch, weil ihr uns begeistert habt. Eure Website, die Projekte, eure Art, der Buchclub... Wir sind echte Fans und möchten von euch lernen."
+    },
+    {
+      heading: "Wir sind keine Profis...",
+      body: "Aber wir arbeiten permanent an uns und erweitern gerne unseren Horizont. Lebenslanges Lernen ist unser Motto und wir glauben an Gemeinschaft."
+    },
+    {
+      heading: "Menschlich scheinen wir ebenfalls zueinander zu passen:",
+      body: "Wir sind aufrichtig, humorvoll, begeisterungsfähig & leidenschaftlich, wir verbringen eine (zugegeben ungesund) hohe Anzahl Stunden auf diversen Social-Media-Plattformen... und wir lieben Bücher!"
+    }
+  ];
+
   return (
     <Bounded
       data-slice-type={slice.slice_type}
@@ -33,23 +49,22 @@ const AlternatingText = ({ slice }: AlternatingTextProps): JSX.Element => {
             <Scene />
           </View>
 
-          {slice.primary.text_group.map((item, index) => (
+          {customTextGroup.map((item, index) => (
             <div
-              key={asText(item.heading)}
+              key={item.heading}
               className="alternating-section grid h-screen place-items-center gap-x-12 md:grid-cols-2"
             >
               <div
                 className={clsx(
                   index % 2 === 0 ? "col-start-1" : "md:col-start-2",
-
                   "rounded-lg p-4 backdrop-blur-lg max-md:bg-white/30",
                 )}
               >
                 <h2 className="text-balance text-6xl font-bold">
-                  <PrismicText field={item.heading} />
+                  {item.heading}
                 </h2>
                 <div className="mt-4 text-xl">
-                  <PrismicRichText field={item.body} />
+                  {item.body}
                 </div>
               </div>
             </div>
