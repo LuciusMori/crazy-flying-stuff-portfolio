@@ -38,9 +38,9 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
     secondHeading: "Lernt unsere kleine Gemeinschaft kennen",
     secondBody: (
       <>
-        Wir wohnen in einer malerischen Waldsiedlung in Stromberg Schindeldorf.
+        Wir wohnen in einer malerischen Waldsiedlung in Stromberg Schindeldorf und glauben daran, dass jede Marke eine Seele hat. Unsere Mission ist es, diese Seele zu finden und sie gesünder und stärker zu machen.
         <br /><br />
-        WIR sind:
+        Aber eins nach dem anderen! WIR sind:
         <br />
         <br />
         Naima (Ognjens bessere Hälfte), Ognjen (Naimas, an guten Tagen, bessere Hälfte), Nadine (Naimas Schwester), Brutus (Nadines treuer Begleiter) und - ehemals - Lane (Naimas und Ognjens Sweety). War das zu kompliziert? Dann scrollt weiter... 
