@@ -25,7 +25,7 @@ const AlternatingText = ({ slice }: AlternatingTextProps): JSX.Element => {
   const customTextGroup = [
     {
       heading: "Wau! Wuff!",
-      body: "Immer dieser Hund! Ständig ergreift er das Wort! Der Ognjen hier: Wir, Naima & ich, bewerben uns bei euch, weil ihr uns begeistert habt. Eure Website, die Projekte, eure Art, der Buchclub... Wir sind echte Fans und möchten von euch lernen."
+      body: "Immer dieser Hund! Ständig ergreift er das Wort! Der Ognjen hier: Wir, Naima & ich, bewerben uns bei euch, weil ihr uns begeistert habt. Eure Website, die Projekte, eure Art, der Buchclub... Wir sind echte Fans und möchten unheimlich gerne mit euch arbeiten."
     },
     {
       heading: "Wir sind keine Profis...",

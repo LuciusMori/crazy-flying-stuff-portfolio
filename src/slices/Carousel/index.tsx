@@ -25,14 +25,8 @@ const sodaFlavors: {
   description: string;
 }[] = [
   { 
-    flavor: "ognjen", 
-    color: "#710523", 
-    name: "Ognjen",
-    description: "Ich bin hier der Web- und Softwareentwickler. Ihr braucht etwas Außergewöhnliches? Dann bin ich euer Mann."
-  },
-  { 
     flavor: "naima", 
-    color: "#572981", 
+    color: "#710523", 
     name: "Naima",
     description: "Ich bin die Social-Media-Versessene. Die Ausbildung zur SM-Managerin habe ich erst kürzlich absolviert und möchte gerne von euch lernen."
   },
@@ -43,16 +37,22 @@ const sodaFlavors: {
     description: "Ich bin auch recht günstig zu haben! Nicht falsch verstehen, ja!?"
   },
   { 
+    flavor: "lane", 
+    color: "#690B3D",
+    name: "Lady Lane",
+    description: "Ich bin nur noch eine Erinnerung. Aber eine Unvergessliche!"
+  },
+  { 
     flavor: "brutus", 
-    color: "#690B3D", 
-    name: "Brutus",
+    color: "#4B7002",  
+    name: "King Brutus",
     description: "Mich gibt es gratis dazu!"
   },
   { 
-    flavor: "lane", 
-    color: "#4B7002", 
-    name: "Lane",
-    description: "Ich bin nur noch eine Erinnerung. Aber eine Unvergessliche!"
+    flavor: "ognjen",
+    color: "#572981",
+    name: "Ognjen",
+    description: "Ich bin hier der Web- und Softwareentwickler. Ihr braucht etwas Außergewöhnliches? Dann bin ich euer Mann."
   },
 ];
 
