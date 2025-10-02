@@ -18,10 +18,10 @@ const BigText = ({ slice }: BigTextProps): JSX.Element => {
     >
       <div className="flex items-center justify-center min-h-screen px-4">
         <h2 className="grid w-full max-w-6xl gap-[2vw] text-center font-black leading-[.8]">
-          <div className="text-[20vw] md:text-[12vw] lg:text-[10vw]">WE'RE</div>
+          <div className="text-[20vw] md:text-[12vw] lg:text-[10vw]">WE&apos;RE</div>
           <div className="grid gap-[1vw] text-[14vw] md:flex md:text-[8vw] lg:text-[6vw] md:justify-center text-green-700">
             <span className="inline-block">how </span>
-            <span className="inline-block">'bout </span>
+            <span className="inline-block">&apos;bout </span>
             <span className="inline-block">you? </span>
           </div>
           <div className="text-[18vw] md:text-[11vw] lg:text-[9vw]">DIFFERENT!</div>

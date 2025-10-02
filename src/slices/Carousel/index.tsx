@@ -113,7 +113,7 @@ const Carousel = ({ slice }: CarouselProps): JSX.Element => {
       <WavyCircles className="absolute left-1/2 top-1/2 h-[120vmin] -translate-x-1/2 -translate-y-1/2 text-[#710523]" />
 
       <h2 className="relative text-center text-5xl font-bold">
-        Uns gib's in unterschiedlichen Geschmacksrichtungen:
+        Uns gib&apos;s in unterschiedlichen Geschmacksrichtungen:
       </h2>
 
       <div className="grid grid-cols-[auto,auto,auto] items-center">
