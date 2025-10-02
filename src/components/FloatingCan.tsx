@@ -18,7 +18,7 @@ type FloatingCanProps = {
 const FloatingCan = forwardRef<Group, FloatingCanProps>(
   (
     {
-      flavor = "blackCherry",
+      flavor = "ognjen",
       floatSpeed = 1.5,
       rotationIntensity = 1,
       floatIntensity = 1,

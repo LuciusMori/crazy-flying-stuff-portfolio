@@ -6,11 +6,11 @@ import * as THREE from "three";
 useGLTF.preload("/Soda-can.gltf");
 
 const flavorTextures = {
-  lemonLime: "/labels/lemon-lime.png",
-  grape: "/labels/grape.png",
-  blackCherry: "/labels/cherry.png",
-  strawberryLemonade: "/labels/strawberry.png",
-  watermelon: "/labels/watermelon.png",
+  ognjen: "/labels/SodaCanLabelOgnjen.png",
+  naima: "/labels/SodaCanLabelNaima.png",
+  nadine: "/labels/SodaCanLabelNadine.png",
+  brutus: "/labels/SodaCanLabelBrutus.png",
+  lane: "/labels/SodaCanLabelLane.png",
 };
 
 const metalMaterial = new THREE.MeshStandardMaterial({
@@ -25,20 +25,20 @@ export type SodaCanProps = {
 };
 
 export function SodaCan({
-  flavor = "blackCherry",
+  flavor = "ognjen",
   scale = 2,
   ...props
 }: SodaCanProps) {
   const { nodes } = useGLTF("/Soda-can.gltf");
 
   const labels = useTexture(flavorTextures);
-
+  
   // Fixes upside down labels
-  labels.strawberryLemonade.flipY = false;
-  labels.blackCherry.flipY = false;
-  labels.watermelon.flipY = false;
-  labels.grape.flipY = false;
-  labels.lemonLime.flipY = false;
+  if (labels.ognjen) labels.ognjen.flipY = false;
+  if (labels.naima) labels.naima.flipY = false;
+  if (labels.nadine) labels.nadine.flipY = false;
+  if (labels.brutus) labels.brutus.flipY = false;
+  if (labels.lane) labels.lane.flipY = false;
 
   const label = labels[flavor];
 
@@ -55,7 +55,11 @@ export function SodaCan({
         receiveShadow
         geometry={(nodes.cylinder_1 as THREE.Mesh).geometry}
       >
-        <meshStandardMaterial roughness={0.15} metalness={0.7} map={label} />
+        <meshStandardMaterial 
+          roughness={0.15} 
+          metalness={0.7} 
+          map={label} 
+        />
       </mesh>
       <mesh
         castShadow

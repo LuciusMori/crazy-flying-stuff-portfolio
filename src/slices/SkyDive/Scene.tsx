@@ -19,6 +19,10 @@ type SkyDiveProps = {
 };
 
 export default function Scene({ sentence, flavor }: SkyDiveProps) {
+  // Fallback für alte oder ungültige Flavor-Werte
+  const validFlavor = (flavor === "ognjen" || flavor === "naima" || flavor === "nadine" || flavor === "brutus" || flavor === "lane") 
+    ? flavor 
+    : "ognjen";
   const groupRef = useRef<THREE.Group>(null);
   const canRef = useRef<THREE.Group>(null);
   const cloud1Ref = useRef<THREE.Group>(null);
@@ -138,7 +142,7 @@ export default function Scene({ sentence, flavor }: SkyDiveProps) {
       <group rotation={[0, 0, 0.5]}>
         <FloatingCan
           ref={canRef}
-          flavor={flavor}
+          flavor={validFlavor}
           rotationIntensity={0}
           floatIntensity={3}
           floatSpeed={3}

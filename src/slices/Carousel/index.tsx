@@ -18,20 +18,42 @@ import { ArrowIcon } from "./ArrowIcon";
 import { WavyCircles } from "./WavyCircles";
 
 const SPINS_ON_CHANGE = 8;
-const FLAVORS: {
+const sodaFlavors: {
   flavor: SodaCanProps["flavor"];
   color: string;
   name: string;
+  description: string;
 }[] = [
-  { flavor: "blackCherry", color: "#710523", name: "Black Cherry" },
-  { flavor: "grape", color: "#572981", name: "Grape Goodness" },
-  { flavor: "lemonLime", color: "#164405", name: "Lemon Lime" },
-  {
-    flavor: "strawberryLemonade",
-    color: "#690B3D",
-    name: "Strawberry Lemonade",
+  { 
+    flavor: "naima", 
+    color: "#710523", 
+    name: "Naima",
+    description: "Ich bin die Social-Media-Versessene. Die Ausbildung zur SM-Managerin habe ich erst kürzlich absolviert und möchte gerne von euch lernen."
   },
-  { flavor: "watermelon", color: "#4B7002", name: "Watermelon Crush" },
+  { 
+    flavor: "nadine", 
+    color: "#164405", 
+    name: "Nadine",
+    description: "Ich bin auch recht günstig zu haben! Nicht falsch verstehen, ja!?"
+  },
+  { 
+    flavor: "lane", 
+    color: "#690B3D",
+    name: "Lady Lane",
+    description: "Ich bin nur noch eine Erinnerung. Aber eine Unvergessliche!"
+  },
+  { 
+    flavor: "brutus", 
+    color: "#4B7002",  
+    name: "King Brutus",
+    description: "Mich gibt es gratis dazu!"
+  },
+  { 
+    flavor: "ognjen",
+    color: "#572981",
+    name: "Ognjen",
+    description: "Ich bin hier der Web- und Softwareentwickler. Ihr braucht etwas Außergewöhnliches? Dann bin ich euer Mann."
+  },
 ];
 
 /**
@@ -49,7 +71,7 @@ const Carousel = ({ slice }: CarouselProps): JSX.Element => {
   function changeFlavor(index: number) {
     if (!sodaCanRef.current) return;
 
-    const nextIndex = (index + FLAVORS.length) % FLAVORS.length;
+    const nextIndex = (index + sodaFlavors.length) % sodaFlavors.length;
 
     const tl = gsap.timeline();
 
@@ -68,8 +90,8 @@ const Carousel = ({ slice }: CarouselProps): JSX.Element => {
       .to(
         ".background, .wavy-circles-outer, .wavy-circles-inner",
         {
-          backgroundColor: FLAVORS[nextIndex].color,
-          fill: FLAVORS[nextIndex].color,
+          backgroundColor: sodaFlavors[nextIndex].color,
+          fill: sodaFlavors[nextIndex].color,
           ease: "power2.inOut",
           duration: 1,
         },
@@ -91,7 +113,7 @@ const Carousel = ({ slice }: CarouselProps): JSX.Element => {
       <WavyCircles className="absolute left-1/2 top-1/2 h-[120vmin] -translate-x-1/2 -translate-y-1/2 text-[#710523]" />
 
       <h2 className="relative text-center text-5xl font-bold">
-        <PrismicText field={slice.primary.heading} />
+        Uns gib's in unterschiedlichen Geschmacksrichtungen:
       </h2>
 
       <div className="grid grid-cols-[auto,auto,auto] items-center">
@@ -108,7 +130,7 @@ const Carousel = ({ slice }: CarouselProps): JSX.Element => {
               ref={sodaCanRef}
               floatIntensity={0.3}
               rotationIntensity={1}
-              flavor={FLAVORS[currentFlavorIndex].flavor}
+              flavor={sodaFlavors[currentFlavorIndex].flavor}
             />
           </Center>
 
@@ -129,10 +151,10 @@ const Carousel = ({ slice }: CarouselProps): JSX.Element => {
 
       <div className="text-area relative mx-auto text-center">
         <div className="text-wrapper text-4xl font-medium">
-          <p>{FLAVORS[currentFlavorIndex].name}</p>
+          <p>{sodaFlavors[currentFlavorIndex].name}</p>
         </div>
-        <div className="mt-2 text-2xl font-normal opacity-90">
-          <PrismicRichText field={slice.primary.price_copy} />
+        <div className="mt-2 text-xl font-normal opacity-90 max-w-md mx-auto">
+          {sodaFlavors[currentFlavorIndex].description}
         </div>
       </div>
     </section>
